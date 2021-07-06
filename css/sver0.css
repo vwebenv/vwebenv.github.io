@@ -1,0 +1,46 @@
+body {
+    background-color: #323437;
+    color: #14e23c;
+}
+a {
+    font-family: BiologicalIOS;
+    font-size: 15px;
+    color: #14e23c;
+    text-decoration: none;
+}
+a:hover {
+    color: #00ff33;
+}
+textarea, textarea:focus {
+    width: 100%;
+    padding: 0%;
+    resize: none;
+    border: none;
+    height: 80vh;
+    outline: none;
+    background-color: #323437;
+    color: #14e23c;
+}
+textarea::selection {
+    color: #323437;
+    background-color: #14e23c;
+}
+textarea::-webkit-scrollbar {
+    width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #14e23c;
+  outline: none;
+  border-radius: 10px;
+}
+
+hr {
+    border-color: #14e23c;
+    border-radius: 10px;
+}
+
+@font-face {
+    font-family: BiologicalIOS;
+    src: url("../other/dos.woff2");
+}
