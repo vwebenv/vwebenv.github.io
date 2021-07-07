@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <!--
-        webenv version 0.1
+        webenv version 0.1.1
     -->
     <head>
         <title>wbenv</title>
@@ -11,11 +11,12 @@
     <body>
         <div style="text-align: center;"><img src="other/logo.svg"></div>
         <hr>
-        <p><a id="sbutton" href="#" onclick="save_code();">Save File</a></p>
+        <pre><a id="sbutton" href="#" onclick="save_code();">Save File</a>    <a id="preview" href="morehtml/preview.html">Preview File (HTML)</a>     <a id="dbutton" href="#">Download File</a></pre>
         <hr>
         <textarea id="codespace" style="font-size: 18px;" spellcheck="false"></textarea>
         <script src="js/fs.js"></script>
         <script src="js/ko.js"></script>
+        <script src="js/dwn.js"></script>
     </body>
 </html>
 

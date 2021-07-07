@@ -1,0 +1,1 @@
+document.getElementById("rt").innerHTML = localStorage.getItem("code");
