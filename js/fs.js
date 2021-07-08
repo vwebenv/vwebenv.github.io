@@ -3,7 +3,7 @@ try {
 }
 finally {
 function save_code() {
-    localStorage.setItem("code", document.getElementById("codespace").value);
+    localStorage.setItem(localStorage.getItem("current"), document.getElementById("codespace").value);
     document.getElementById("sbutton").innerText = "Save File";
 }
 }

@@ -1,1 +1,1 @@
-document.getElementById("rt").innerHTML = localStorage.getItem("code");
+document.getElementById("rt").innerHTML = localStorage.getItem(localStorage.getItem("current"));

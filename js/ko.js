@@ -28,6 +28,55 @@ document.getElementById("codespace").addEventListener('keydown', function (e) {
             }
         }
     }
+    if (e.key.toLowerCase() == "z" && e.ctrlKey) {
+        if (e.target.selectionStart > 4) {
+            var sailine = sai(document.getElementById("codespace").value, e.target.selectionStart)[0];
+            var cond = 0.00;
+            for (var i = 0; i < 4; i++) {
+                if (chck(sailine, i + 1) == " ") {
+                    cond += 0.25;
+                }
+            }
+            if (cond == 1) {
+                var csvar = e.target.selectionStart;
+                document.getElementById("codespace").value = sai(document.getElementById("codespace").value, e.target.selectionStart - 4)[0] + sai(document.getElementById("codespace").value, e.target.selectionStart)[1];
+                e.target.setSelectionRange(csvar - 4, csvar - 4);
+                e.preventDefault();
+            }
+        }
+    }
+    if (e.key == "ArrowLeft") {
+        if (e.target.selectionStart > 4) {
+            var sailine = sai(document.getElementById("codespace").value, e.target.selectionStart)[0];
+            var cond = 0.00;
+            for (var i = 0; i < 4; i++) {
+                if (chck(sailine, i + 1) == " ") {
+                    cond += 0.25;
+                }
+            }
+            if (cond == 1) {
+                var csvar = e.target.selectionStart;
+                e.target.setSelectionRange(csvar - 4, csvar - 4);
+                e.preventDefault();
+            }
+        }
+    }
+    if (e.key == "ArrowRight") {
+        if (e.target.selectionStart > 4) {
+            var sailine = sai(document.getElementById("codespace").value, e.target.selectionStart)[1];
+            var cond = 0.00;
+            for (var i = 0; i < 4; i++) {
+                if (sailine[i] == " ") {
+                    cond += 0.25;
+                }
+            }
+            if (cond == 1) {
+                var csvar = e.target.selectionStart;
+                e.target.setSelectionRange(csvar + 4, csvar + 4);
+                e.preventDefault();
+            }
+        }
+    }
 });
 document.addEventListener("keydown", function(e) {
     if (localStorage.getItem("code") != document.getElementById("codespace").value) {

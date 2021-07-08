@@ -1,3 +1,3 @@
-document.getElementById("dbutton").href = "data:attachment/text," + encodeURI(localStorage.getItem("code"));
+document.getElementById("dbutton").href = "data:attachment/text," + encodeURI(localStorage.getItem(localStorage.getItem("current")));
 document.getElementById("dbutton").target = "_blank";
-document.getElementById("dbutton").download = "code.html";
+document.getElementById("dbutton").download = localStorage.getItem("current");
